@@ -11,6 +11,7 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+
+$router->group(['prefix' => 'api/v1', 'middleware' => 'auth'], function () use ($router) {
+    $router->get('requests', 'RequestsController@index');
 });
