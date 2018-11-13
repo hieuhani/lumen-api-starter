@@ -14,4 +14,5 @@
 
 $router->group(['prefix' => 'api/v1', 'middleware' => 'auth'], function () use ($router) {
     $router->get('requests', 'RequestsController@index');
+    $router->post('requests', 'RequestsController@create');
 });

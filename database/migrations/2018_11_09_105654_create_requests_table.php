@@ -19,8 +19,9 @@ class CreateRequestsTable extends Migration
             $table->uuid('company_id');
             $table->uuid('company_user_id');
             $table->uuid('user_id');
-            $table->smallInteger('status');
+            $table->string('status');
             $table->softDeletes();
+            $table->timestamps();
         });
     }
 
